@@ -5,15 +5,23 @@ Abstracted C/C++ libraries which provide the functionality of common programming
 
 # Libraries Installation / Usage
 
+# C Libraries
+
+# C++ Libraries
+
+1). stringoperation
+
+# Example Programs
+
 ## C Libraries
 
 ## C++ Libraries
 
-# Example Programs
+1). "Replace" - Function
 
 # Library / Header Information
 
-1). Please refer to the word document "DOCUMENT NAME.docx" for further information about the libraries, headers and usage.
+1). Please refer to the document "Technical Paper.docx" for further information about the libraries, headers and usage.
 
 # Contact me
 
