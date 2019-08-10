@@ -3,6 +3,14 @@ Abstracted C/C++ libraries which provide the functionality of common programming
 
 # Purpose
 
+# Usage
+
+## C Libraries
+
+## C++ Libraries
+
+## Example Programs
+
 # Contact me
 
 Join the discord server using the following web address: https://discord.gg/B8NmmuM
