@@ -3,13 +3,17 @@ Abstracted C/C++ libraries which provide the functionality of common programming
 
 # Purpose
 
-# Usage
+# Libraries Installation / Usage
 
 ## C Libraries
 
 ## C++ Libraries
 
-## Example Programs
+# Example Programs
+
+# Library / Header Information
+
+1). Please refer to the word document "DOCUMENT NAME.docx" for further information about the libraries, headers and usage.
 
 # Contact me
 
