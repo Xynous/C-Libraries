@@ -13,6 +13,10 @@ The project plan is to begin gradually developing C and C++ libraries, using a l
 
 1). Please refer to the document __"Technical Paper.docx"__ for further information about the libraries, headers and usage within the C / C++ programming languages.
 
+# Example Programs
+
+1). Library usage examples can be found within the __"Technical Paper.docx"__ and within the __"Example Programs"__ folder within this project repository. Note that the example source code provides __"Comments"__ which provides further explanation where as the technical paper does not, due to document formatting been cleaner and easy to read without the added comments.
+
 # Contact me
 
 Email me at: day.ashleigh@gmail.com
