@@ -23,4 +23,4 @@ Email me at: day.ashleigh@gmail.com
 
 # Author / Credits
 
-Mr. Ashleigh Day (Software Engineer)
+Mr. Ashleigh Day - Computer Scientist
