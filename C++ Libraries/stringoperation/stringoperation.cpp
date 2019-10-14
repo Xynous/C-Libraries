@@ -24,6 +24,27 @@ std::string Replace(std::string stringValue, const std::string stringToReplace, 
         stringValue.replace(position, maximum_character_replacement, newString);	// Replaces the old string with the new string from the detected starting position of the string.
     }
     
-    return stringValue;		// Returns the new string value.
+    return stringValue;	
+}
+
+std::string toLower(std::string stringToLower)  // toLower function, which converts all characters within the string to lowercase.
+{
+    transform(stringToLower.begin(), stringToLower.end(), stringToLower.begin(), ::tolower);
+    
+    return stringToLower;
+}
+
+std::string toUpper(std::string stringToUpper)   // toUpper function, which converts all characters within the string to uppercase.
+{
+    transform(stringToUpper.begin(), stringToUpper.end(), stringToUpper.begin(), ::toupper);
+    
+    return stringToUpper;
+}
+
+int stringSize(std::string stringSize)   // Function returns the total size of a string.
+{
+    int returnSize = stringSize.size();
+    
+    return returnSize;
 }
 

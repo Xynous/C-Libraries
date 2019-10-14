@@ -17,6 +17,11 @@
 
 #endif /* stringoperation_hpp */
 
-std::string Replace(std::string, const std::string, const std::string);	// Declared function / function prototype for string replace functionality.
+std::string Replace(std::string, const std::string, const std::string);	// Declared function / function prototype for string replace functionality
 
+std::string toLower(std::string);   // Declared function / function prototype for converting strings to lowercase
+
+std::string toUpper(std::string);   // Declared function / function prototype for converting strings to uppercase
+
+int stringSize(std::string);    // Declared function / function prototype for calculating and returning the total string size
 
