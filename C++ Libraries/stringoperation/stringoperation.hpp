@@ -25,5 +25,9 @@ std::string toUpper(std::string);   // Declared function / function prototype fo
 
 int stringSize(std::string);    // Declared function / function prototype for calculating and returning the total string size
 
-std::string* split(std::string, std::string);	 // Declared function / function prototype for splitting strings into tokens.
+std::string* split(std::string, std::string);	 // Declared function / function prototype for splitting strings into tokens
+
+bool boolfindString(std::string, std::string);  // Declared function / function prototype for finding a set of characters/strings
+
+int integerFindString(std::string, std::string);    // Declared function / function prototype for finding a set of characters/strings
 

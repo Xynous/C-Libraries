@@ -75,4 +75,32 @@ std::string* split(std::string stringToSplit, std::string delimiters)    // Func
    }
 
     return returnedArray;	// Returns array base pointer, which gives access to all of the returned strings stored within the array.
-}    
+}
+
+bool boolfindString(std::string stringToSearch, std::string stringToFind)   // Functions checks if a set of characters/strings can be found, returns true (1) if characters are found and false (0) if not found.
+{
+    std::size_t found = stringToSearch.find(stringToFind);
+    
+    bool stringFound = false;
+    
+    if (found!=std::string::npos) {
+        
+        stringFound = true;
+    }
+    
+    return stringFound;
+}
+
+int integerFindString(std::string stringToSearch, std::string stringToFind) // Function checks if a set of characters/strings can be found, returns the starting position of the character/string if found and returns "string::npos" (0) if character/string cannot be found.
+{
+    std::size_t found = stringToSearch.find(stringToFind);
+    
+    std::size_t positionReturn;
+    
+    if (found!=std::string::npos) {
+        
+        positionReturn = found;
+    }
+    
+    return positionReturn;
+}
