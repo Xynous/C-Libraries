@@ -17,17 +17,17 @@
 
 #endif /* stringoperation_hpp */
 
-std::string Replace(std::string, const std::string, const std::string);	// Declared function / function prototype for string replace functionality
+std::string replace(std::string, const std::string, const std::string);	// Declared function / function prototype for string replace functionality
 
-std::string toLower(std::string);   // Declared function / function prototype for converting strings to lowercase
+std::string toLowerCase(std::string);   // Declared function / function prototype for converting strings to lowercase
 
-std::string toUpper(std::string);   // Declared function / function prototype for converting strings to uppercase
+std::string toUpperCase(std::string);   // Declared function / function prototype for converting strings to uppercase
 
-int stringSize(std::string);    // Declared function / function prototype for calculating and returning the total string size
+int size(std::string);    // Declared function / function prototype for calculating and returning the total string size
 
 std::string* split(std::string, std::string);	 // Declared function / function prototype for splitting strings into tokens
 
-bool boolfindString(std::string, std::string);  // Declared function / function prototype for finding a set of characters/strings
+bool findstring(std::string, std::string);  // Declared function / function prototype for finding a set of characters/strings
 
-int integerFindString(std::string, std::string);    // Declared function / function prototype for finding a set of characters/strings
+int find(std::string, std::string);    // Declared function / function prototype for finding a set of characters/strings
 

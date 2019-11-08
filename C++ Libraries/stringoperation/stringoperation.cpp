@@ -2,7 +2,7 @@
 //  stringoperation.cpp
 //
 //  Created by Ashleigh Day on 03/08/2019.
-//  Copyright © 2019 Ashleigh. All rights reserved.
+//  Copyright © 2019 Ashleigh Day. All rights reserved.
 //
 //
 // The purpose of the C++ library "stringoperation" is to provide an abstraction layer for common programming tasks within the C++ programming language.
@@ -10,12 +10,12 @@
 // details and usage of the standard C++ libraries provided by the language.
 
 
-#include <algorithm>	// Includes the "find()" and "replace()" function.
-#include <string>		// Includes the "string" object/class.
+#include <algorithm>	// Include directives
+#include <string>		
 #include <cstring>
 #include <cstdlib>
 
-std::string Replace(std::string stringValue, const std::string stringToReplace, const std::string newString)	//  Replaces function, which replaces a specific string value with a new string.
+std::string replace(std::string stringValue, const std::string stringToReplace, const std::string newString)	//  replaces function replaces a specific string value with a new string.
 {
     std::string::size_type position = 0;		// Declared and initialized variable for character positioning, "size_type" type provides a large enough size for any string size which is calculated.
 
@@ -29,21 +29,21 @@ std::string Replace(std::string stringValue, const std::string stringToReplace, 
     return stringValue;	
 }
 
-std::string toLower(std::string stringToLower)  // toLower function, which converts all characters within the string to lowercase.
+std::string toLowerCase(std::string stringToLower)  // toLowerCase function converts all characters within the string to lowercase.
 {
     transform(stringToLower.begin(), stringToLower.end(), stringToLower.begin(), ::tolower);
     
     return stringToLower;
 }
 
-std::string toUpper(std::string stringToUpper)   // toUpper function, which converts all characters within the string to uppercase.
+std::string toUpperCase(std::string stringToUpper)   // toUpperCase function converts all characters within the string to uppercase.
 {
     transform(stringToUpper.begin(), stringToUpper.end(), stringToUpper.begin(), ::toupper);
     
     return stringToUpper;
 }
 
-int stringSize(std::string stringSize)   // Function returns the total size of a string.
+int size(std::string stringSize)   // Function returns the length of a string in bytes
 {
     int returnSize = stringSize.size();
     
@@ -77,7 +77,7 @@ std::string* split(std::string stringToSplit, std::string delimiters)    // Func
     return returnedArray;	// Returns array base pointer, which gives access to all of the returned strings stored within the array.
 }
 
-bool boolfindString(std::string stringToSearch, std::string stringToFind)   // Functions checks if a set of characters/strings can be found, returns true (1) if characters are found and false (0) if not found.
+bool findstring(std::string stringToSearch, std::string stringToFind)   // Functions checks if a set of characters/strings can be found, returns true (1) if characters are found and false (0) if not found.
 {
     std::size_t found = stringToSearch.find(stringToFind);
     
@@ -91,7 +91,7 @@ bool boolfindString(std::string stringToSearch, std::string stringToFind)   // F
     return stringFound;
 }
 
-int integerFindString(std::string stringToSearch, std::string stringToFind) // Function checks if a set of characters/strings can be found, returns the starting position of the character/string if found and returns "string::npos" (0) if character/string cannot be found.
+int find(std::string stringToSearch, std::string stringToFind) // Function checks if a set of characters/strings can be found, returns the starting position of the character/string if found and returns "string::npos" (0) if character/string cannot be found.
 {
     std::size_t found = stringToSearch.find(stringToFind);
     
