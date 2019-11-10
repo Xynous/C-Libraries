@@ -31,3 +31,5 @@ bool findstring(std::string, std::string);  // Declared function / function prot
 
 int find(std::string, std::string);    // Declared function / function prototype for finding a set of characters/strings
 
+std::string trim(std::string, std::string);	// Declared function / function prototype for removing leading and trailing whitespaces
+

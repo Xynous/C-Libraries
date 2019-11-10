@@ -104,3 +104,43 @@ int find(std::string stringToSearch, std::string stringToFind) // Function check
     
     return positionReturn;
 }
+
+std::string trim(std::string stringValue, std::string trimmingOption)  // Function trims the passed string and returns the results.
+{
+	std::string errorMessage;
+	std::string characters = "\t\n\v\f\r ";
+    std::string convertToUpperCase = toUpperCase(trimmingOption);
+
+    if(convertToUpperCase == "L")	// Condition checks if the passed trimming operation is a left trim, which removes whitespaces at the start of the string.
+    {
+    	stringValue.erase(0, stringValue.find_first_not_of(characters));
+    }
+
+    if(convertToUpperCase == "R")	// Condition checks if the passed trimming operation is a right trim, which removes whitespaces at the end of the string.
+    {
+    	stringValue.erase(stringValue.find_last_not_of(characters) + 1);
+    }
+
+    if(convertToUpperCase == "A")	// Condition checks if the passed trimming operation is a trim all operation, which removes leading and trailing whitespaces.
+    {
+    	stringValue.erase(0, stringValue.find_first_not_of(characters));
+
+    	stringValue.erase(stringValue.find_last_not_of(characters) + 1);
+    }
+
+    if(convertToUpperCase != "L" && convertToUpperCase !="R" && convertToUpperCase !="A")   // Condition checks if the trimming operation is valid.
+    {
+    	errorMessage = "Error: Invalid trimming operation, refer to the project wiki for the list of trimming operations";
+
+    	return errorMessage;
+    }
+
+    if(convertToUpperCase.empty() || stringValue.empty())	// Condition checks if the passed string value and trimming option is empty.
+    {
+        errorMessage = "Error: String and trimming operation cant be empty, refer to the project wiki for further information and examples";
+
+        return errorMessage;
+    }
+    
+    return stringValue;
+}
