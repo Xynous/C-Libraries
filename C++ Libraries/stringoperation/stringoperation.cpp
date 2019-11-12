@@ -52,7 +52,7 @@ int size(std::string stringSize)   // Function returns the length of a string in
 
 std::string* split(std::string stringToSplit, std::string delimiters)    // Function splits the passed string and returns the results, this function is a wrapper for the 'C Language' strtok implementation.
 {
-
+	std::string characters = "\t\n\v\f\r ";
 	std::string* returnedArray = new std::string[1024];		// String pointer array, with a set size of "1024" elements.
 	int counter = 0;
 
@@ -74,7 +74,14 @@ std::string* split(std::string stringToSplit, std::string delimiters)    // Func
 	   counter++;
    }
 
-    return returnedArray;	// Returns array base pointer, which gives access to all of the returned strings stored within the array.
+   for(int i = 0; i < counter; i++)	// For loop removes leading and trailing whitespaces within each string split.
+   {
+   		returnedArray[i].erase(0, returnedArray[i].find_first_not_of(characters));
+
+   		returnedArray[i].erase(returnedArray[i].find_last_not_of(characters) + 1);
+   }
+
+   return returnedArray;	// Returns array base pointer, which gives access to all of the returned strings stored within the array.
 }
 
 bool findstring(std::string stringToSearch, std::string stringToFind)   // Functions checks if a set of characters/strings can be found, returns true (1) if characters are found and false (0) if not found.
@@ -111,17 +118,17 @@ std::string trim(std::string stringValue, std::string trimmingOption)  // Functi
 	std::string characters = "\t\n\v\f\r ";
     std::string convertToUpperCase = toUpperCase(trimmingOption);
 
-    if(convertToUpperCase == "L")	// Condition checks if the passed trimming operation is a left trim, which removes whitespaces at the start of the string.
+    if(convertToUpperCase == "L")
     {
     	stringValue.erase(0, stringValue.find_first_not_of(characters));
     }
 
-    if(convertToUpperCase == "R")	// Condition checks if the passed trimming operation is a right trim, which removes whitespaces at the end of the string.
+    if(convertToUpperCase == "R")
     {
     	stringValue.erase(stringValue.find_last_not_of(characters) + 1);
     }
 
-    if(convertToUpperCase == "A")	// Condition checks if the passed trimming operation is a trim all operation, which removes leading and trailing whitespaces.
+    if(convertToUpperCase == "A")
     {
     	stringValue.erase(0, stringValue.find_first_not_of(characters));
 
