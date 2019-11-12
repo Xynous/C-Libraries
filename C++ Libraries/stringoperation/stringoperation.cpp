@@ -118,17 +118,17 @@ std::string trim(std::string stringValue, std::string trimmingOption)  // Functi
 	std::string characters = "\t\n\v\f\r ";
     std::string convertToUpperCase = toUpperCase(trimmingOption);
 
-    if(convertToUpperCase == "L")
+    if(convertToUpperCase == "L")	// Condition checks if the passed trimming operation is a left trim, which removes whitespaces at the start of the string.
     {
     	stringValue.erase(0, stringValue.find_first_not_of(characters));
     }
 
-    if(convertToUpperCase == "R")
+    if(convertToUpperCase == "R")	// Condition checks if the passed trimming operation is a right trim, which removes whitespaces at the end of the string.
     {
     	stringValue.erase(stringValue.find_last_not_of(characters) + 1);
     }
 
-    if(convertToUpperCase == "A")
+    if(convertToUpperCase == "A")	// Condition checks if the passed trimming operation is a trim all operation, which removes leading and trailing whitespaces.
     {
     	stringValue.erase(0, stringValue.find_first_not_of(characters));
 
