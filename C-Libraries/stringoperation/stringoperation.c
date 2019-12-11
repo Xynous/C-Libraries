@@ -45,31 +45,32 @@ char *trim_right(char *stringValue) {
 
 }
 
-char *toLowerCase(char *pCharactersToLower) {		// Need to test code further with Linux
+char *toLowerCase(char *pCharactersToLower) {
 
-	char* toLowerCaseReturn;
-	errno_t error;
+	char *tmp = pCharactersToLower;
 
-	error = _strlwr_s(toLowerCaseReturn = _strdup(pCharactersToLower), strlen(pCharactersToLower) + 1);
+    for (;*tmp;tmp++) {
+        *tmp = tolower((unsigned char) *tmp);
+    }
 
-	return toLowerCaseReturn;
-	
+    return pCharactersToLower;
 }
 
-char *toUpperCase(char *pCharactersToUpper) {	// Need to test code further with Linux
+char *toUpperCase(char *pCharactersToUpper) {
 
-	char* toUpperCaseReturn;
-	errno_t error;
+	char *tmp = pCharactersToUpper;
 
-	error = _strupr_s(toUpperCaseReturn = _strdup(pCharactersToUpper), strlen(pCharactersToUpper) + 1);
+    for (;*tmp;tmp++) {
+        *tmp = toupper((unsigned char) *tmp);
+    }
 
-	return toUpperCaseReturn;
+    return pCharactersToUpper;
 }
 
 char *trim(char *stringValue, char *trimmingOption) {
-	
+
 	char *errorMessage;
-	
+
 	if (strcmp(trimmingOption, "L") == 0) {
 
 		stringValue = trim_left(stringValue);
