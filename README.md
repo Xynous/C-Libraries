@@ -24,3 +24,5 @@ Email me at: day.ashleigh@gmail.com
 # Author / Credits
 
 Mr. Ashleigh Day - Computer Scientist
+
+# DISCONTINUED PROJECT, WILL WRITE NEW LIBRARIES FOR THE LANGUAGE AS REQUIRED.
